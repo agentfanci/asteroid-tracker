@@ -5,7 +5,7 @@ public class AsteroidTracker {
 	
 	public AsteroidTracker() {
 		record = new PriorityQueue<Asteroid>(new AsteriodDangerComparator());
-		//this.addAsteroid("All Discovered Asteroids Destroyed!", 0);
+		
 		
 	}
 	
