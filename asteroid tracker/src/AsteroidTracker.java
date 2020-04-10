@@ -5,25 +5,27 @@ public class AsteroidTracker {
 	
 	public AsteroidTracker() {
 		record = new PriorityQueue<Asteroid>(new AsteriodDangerComparator());
-		//this.addAsteroid("All Discovered Asteroids Destroyed!", 0);
+		//make the queue with the special comparator
 		
 	}
 	
 	public void addAsteroid(String title, int danger) {
 		Asteroid ast = new Asteroid(title, danger);
 		record.add(ast);
-		
+		//add an asteroid from title and danger
+		//high danger numbers should be destroyed sooner
 	}
 	
 	public void addAsteroid(Asteroid a) {
 		record.add(a);
+		//alt add asteroid for if you already made one
 	}
 	
 	public Asteroid getNext() {
-		if (record.size() > 0) {
+		if (record.size() > 0) { //if there are some in the record
 			Asteroid nex = record.poll();
 			System.out.println("Next Asteroid to Destroy: " + nex.getName());
-			return nex;
+			return nex; //returns asteroid and prints name
 		}
 		else {
 			Asteroid ender = new Asteroid("All Destroyed", 0);

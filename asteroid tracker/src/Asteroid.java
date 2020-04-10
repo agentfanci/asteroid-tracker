@@ -1,7 +1,7 @@
 
 public class Asteroid {
-	private int danger;
-	private  String title;
+	private int danger; //danger level- higher numbers should be destroyed sooner
+	private  String title; //some identifier
 	
 	public Asteroid(String titl, int dan) {
 		title = titl;
